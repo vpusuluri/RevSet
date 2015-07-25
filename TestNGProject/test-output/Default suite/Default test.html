@@ -1,0 +1,373 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Jul 25 21:52:39 IST 2015</td>
+</tr>
+<tr><td>Total time:</td><td>62 seconds (62135 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestClass1.setup()'><b>setup</b><br>Test class: TestClass1</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(C:\Program Files (x86)\Mozilla Firefox\firefox.exe) on port 7055; process output follows: 
+.xpi	DEBUG	Skipping unavailable install location app-system-local
+1437841379440	addons.xpi	DEBUG	Skipping unavailable install location app-system-share
+1437841379441	addons.xpi	INFO	Mapping {82AF8DCA-6DE9-405D-BD5E-43525BDAD38A} to C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{82AF8DCA-6DE9-405D-BD5E-43525BDAD38A}.xpi
+1437841379441	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}
+1437841379445	addons.xpi	INFO	Mapping fxdriver@googlecode.com to C:\Users\VIJAYB~1\AppData\Local\Temp\anonymous6423493043420666688webdriver-profile\extensions\fxdriver@googlecode.com
+1437841379445	addons.xpi	DEBUG	Ignoring file entry whose name is not a valid add-on ID: C:\Users\VIJAYB~1\AppData\Local\Temp\anonymous6423493043420666688webdriver-profile\extensions\webdriver-staging
+1437841379446	addons.xpi	INFO	Mapping {635abd67-4fe9-1b23-4f01-e679fa7484c1} to C:\Users\VIJAYB~1\AppData\Local\Temp\anonymous6423493043420666688webdriver-profile\extensions\{635abd67-4fe9-1b23-4f01-e679fa7484c1}
+1437841379446	addons.xpi	DEBUG	checkForChanges
+1437841379692	addons.xpi	DEBUG	No changes found
+1437841379701	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{82AF8DCA-6DE9-405D-BD5E-43525BDAD38A}.xpi
+1437841379703	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{82AF8DCA-6DE9-405D-BD5E-43525BDAD38A}.xpi
+1437841379718	addons.xpi	DEBUG	Calling bootstrap method startup on {82AF8DCA-6DE9-405D-BD5E-43525BDAD38A} version 7.4.0.9058
+*** Blocklist::_preloadBlocklistFile: blocklist is disabled
+console.error: skype_ff_extension: 
+  DEPRECATED: The widget module is deprecated.  Please consider using the sdk/ui module instead.
+Traceback (most recent call last):
+  File &quot;resource://gre/modules/commonjs/sdk/addon/runner.js&quot;, line 115, in startup/&lt;
+    run(options);
+  File &quot;resource://gre/modules/commonjs/sdk/addon/runner.js&quot;, line 172, in run
+    let program = main(options.loader, options.main);
+  File &quot;resource://gre/modules/commonjs/toolkit/loader.js&quot;, line 659, in main
+    return loader.load(loader, module).exports;
+  File &quot;resource://gre/modules/commonjs/sdk/loader/cuddlefish.js&quot;, line 129, in CuddlefishLoader/options&lt;.load
+    result = load(loader, module);
+  File &quot;resource://gre/modules/commonjs/toolkit/loader.js&quot;, line 313, in load
+    evaluate(sandbox, module.uri);
+  File &quot;resource://gre/modules/commonjs/toolkit/loader.js&quot;, line 262, in evaluate
+    : loadSubScript(uri, sandbox, encoding);
+  File &quot;resource://skype_ff_extension-at-jetpack/skype_ff_extension/lib/main.js&quot;, line 14, in null
+    var widgets = require(&quot;sdk/widget&quot;);
+  File &quot;resource://gre/modules/commonjs/toolkit/loader.js&quot;, line 633, in require
+    freeze(load(loader, module));
+  File &quot;resource://gre/modules/commonjs/sdk/loader/cuddlefish.js&quot;, line 129, in CuddlefishLoader/options&lt;.load
+    result = load(loader, module);
+  File &quot;resource://gre/modules/commonjs/toolkit/loader.js&quot;, line 313, in load
+    evaluate(sandbox, module.uri);
+  File &quot;resource://gre/modules/commonjs/toolkit/loader.js&quot;, line 262, in evaluate
+    : loadSubScript(uri, sandbox, encoding);
+  File &quot;resource://gre/modules/commonjs/sdk/widget.js&quot;, line 59, in null
+    require(&quot;./util/deprecate&quot;).deprecateUsage(
+  File &quot;resource://gre/modules/commonjs/sdk/util/deprecate.js&quot;, line 18, in deprecateUsage
+    let stack = get().slice(2);
+JavaScript error: resource://skype_ff_extension-at-jetpack/skype_ff_extension/data/c2c_options_menu_localization.js, line 189: document.getElementById(...) is null
+System JS : ERROR chrome://ytoolbar/content/ytb_gradient_generator.js:23 - SyntaxError: An invalid or illegal string was specified
+JavaScript error: http://www.firefoxnotice.com/js/notice.js?data=0EwmYE85WV4gYmKlLmXa;q421BGnXF7kKEH91F4rK6P71RCjW9X[OELb;9wgXTknZpwfYp8nVFH8;okbYUP7XUsVYUs7Zq;hYFPgZC/[KQrkOC[mKlrjGA4rMBW3XUrgTTKc, line 5: Permission denied to access property &apos;type&apos;
+
+Build info: version: &apos;2.33.0&apos;, revision: &apos;4ecaf82108b2a6cc6f006aae81961236eba93358&apos;, time: &apos;2013-05-22 12:00:17&apos;
+System info: os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_71&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:118)
+	at org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:244)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:110)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:188)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:183)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:179)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:92)
+	at TestClass1.setup(TestClass1.java:20)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.firefox.NotConnectedException: Unable to connect to host 127.0.0.1 on port 7055 after 45000 ms. Firefox console output:
+.xpi	DEBUG	Skipping unavailable install location app-system-local
+1437841379440	addons.xpi	DEBUG	Skipping unavailable install location app-system-share
+1437841379441	addons.xpi	INFO	Mapping {82AF8DCA-6DE9-405D-BD5E-43525BDAD38A} to C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{82AF8DCA-6DE9-405D-BD5E-43525BDAD38A}.xpi
+1437841379441	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}
+1437841379445	addons.xpi	INFO	Mapping fxdriver@googlecode.com to C:\Users\VIJAYB~1\AppData\Local\Temp\anonymous6423493043420666688webdriver-profile\extensions\fxdriver@googlecode.com
+1437841379445	addons.xpi	DEBUG	Ignoring file entry whose name is not a valid add-on ID: C:\Users\VIJAYB~1\AppData\Local\Temp\anonymous6423493043420666688webdriver-profile\extensions\webdriver-staging
+1437841379446	addons.xpi	INFO	Mapping {635abd67-4fe9-1b23-4f01-e679fa7484c1} to C:\Users\VIJAYB~1\AppData\Local\Temp\anonymous6423493043420666688webdriver-profile\extensions\{635abd67-4fe9-1b23-4f01-e679fa7484c1}
+1437841379446	addons.xpi	DEBUG	checkForChanges
+1437841379692	addons.xpi	DEBUG	No changes found
+1437841379701	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{82AF8DCA-6DE9-405D-BD5E-43525BDAD38A}.xpi
+1437841379703	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{82AF8DCA-6DE9-405D-BD5E-43525BDAD38A}.xpi
+1437841379718	addons.xpi	DEBUG	Calling bootstrap method startup on {82AF8DCA-6DE9-405D-BD5E-43525BDAD38A} version 7.4.0.9058
+*** Blocklist::_preloadBlocklistFile: blocklist is disabled
+console.error: skype_ff_extension: 
+  DEPRECATED: The widget module is deprecated.  Please consider using the sdk/ui module instead.
+Traceback (most recent call last):
+  File &quot;resource://gre/modules/commonjs/sdk/addon/runner.js&quot;, line 115, in startup/&lt;
+    run(options);
+  File &quot;resource://gre/modules/commonjs/sdk/addon/runner.js&quot;, line 172, in run
+    let program = main(options.loader, options.main);
+  File &quot;resource://gre/modules/commonjs/toolkit/loader.js&quot;, line 659, in main
+    return loader.load(loader, module).exports;
+  File &quot;resource://gre/modules/commonjs/sdk/loader/cuddlefish.js&quot;, line 129, in CuddlefishLoader/options&lt;.load
+    result = load(loader, module);
+  File &quot;resource://gre/modules/commonjs/toolkit/loader.js&quot;, line 313, in load
+    evaluate(sandbox, module.uri);
+  File &quot;resource://gre/modules/commonjs/toolkit/loader.js&quot;, line 262, in evaluate
+    : loadSubScript(uri, sandbox, encoding);
+  File &quot;resource://skype_ff_extension-at-jetpack/skype_ff_extension/lib/main.js&quot;, line 14, in null
+    var widgets = require(&quot;sdk/widget&quot;);
+  File &quot;resource://gre/modules/commonjs/toolkit/loader.js&quot;, line 633, in require
+    freeze(load(loader, module));
+  File &quot;resource://gre/modules/commonjs/sdk/loader/cuddlefish.js&quot;, line 129, in CuddlefishLoader/options&lt;.load
+    result = load(loader, module);
+  File &quot;resource://gre/modules/commonjs/toolkit/loader.js&quot;, line 313, in load
+    evaluate(sandbox, module.uri);
+  File &quot;resource://gre/modules/commonjs/toolkit/loader.js&quot;, line 262, in evaluate
+    : loadSubScript(uri, sandbox, encoding);
+  File &quot;resource://gre/modules/commonjs/sdk/widget.js&quot;, line 59, in null
+    require(&quot;./util/deprecate&quot;).deprecateUsage(
+  File &quot;resource://gre/modules/commonjs/sdk/util/deprecate.js&quot;, line 18, in deprecateUsage
+    let stack = get().slice(2);
+JavaScript error: resource://skype_ff_extension-at-jetpack/skype_ff_extension/data/c2c_options_menu_localization.js, line 189: document.getElementById(...) is null
+System JS : ERROR chrome://ytoolbar/content/ytb_gradient_generator.js:23 - SyntaxError: An invalid or illegal string was specified
+JavaScript error: http://www.firefoxnotice.com/js/notice.js?data=0EwmYE85WV4gYmKlLmXa;q421BGnXF7kKEH91F4rK6P71RCjW9X[OELb;9wgXTknZpwfYp8nVFH8;okbYUP7XUsVYUs7Zq;hYFPgZC/[KQrkOC[mKlrjGA4rMBW3XUrgTTKc, line 5: Permission denied to access property &apos;type&apos;
+
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:106)
+	... 31 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace591666987", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace591666987'><pre>org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(C:\Program Files (x86)\Mozilla Firefox\firefox.exe) on port 7055; process output follows: 
+.xpi	DEBUG	Skipping unavailable install location app-system-local
+1437841379440	addons.xpi	DEBUG	Skipping unavailable install location app-system-share
+1437841379441	addons.xpi	INFO	Mapping {82AF8DCA-6DE9-405D-BD5E-43525BDAD38A} to C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{82AF8DCA-6DE9-405D-BD5E-43525BDAD38A}.xpi
+1437841379441	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}
+1437841379445	addons.xpi	INFO	Mapping fxdriver@googlecode.com to C:\Users\VIJAYB~1\AppData\Local\Temp\anonymous6423493043420666688webdriver-profile\extensions\fxdriver@googlecode.com
+1437841379445	addons.xpi	DEBUG	Ignoring file entry whose name is not a valid add-on ID: C:\Users\VIJAYB~1\AppData\Local\Temp\anonymous6423493043420666688webdriver-profile\extensions\webdriver-staging
+1437841379446	addons.xpi	INFO	Mapping {635abd67-4fe9-1b23-4f01-e679fa7484c1} to C:\Users\VIJAYB~1\AppData\Local\Temp\anonymous6423493043420666688webdriver-profile\extensions\{635abd67-4fe9-1b23-4f01-e679fa7484c1}
+1437841379446	addons.xpi	DEBUG	checkForChanges
+1437841379692	addons.xpi	DEBUG	No changes found
+1437841379701	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{82AF8DCA-6DE9-405D-BD5E-43525BDAD38A}.xpi
+1437841379703	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{82AF8DCA-6DE9-405D-BD5E-43525BDAD38A}.xpi
+1437841379718	addons.xpi	DEBUG	Calling bootstrap method startup on {82AF8DCA-6DE9-405D-BD5E-43525BDAD38A} version 7.4.0.9058
+*** Blocklist::_preloadBlocklistFile: blocklist is disabled
+console.error: skype_ff_extension: 
+  DEPRECATED: The widget module is deprecated.  Please consider using the sdk/ui module instead.
+Traceback (most recent call last):
+  File &quot;resource://gre/modules/commonjs/sdk/addon/runner.js&quot;, line 115, in startup/&lt;
+    run(options);
+  File &quot;resource://gre/modules/commonjs/sdk/addon/runner.js&quot;, line 172, in run
+    let program = main(options.loader, options.main);
+  File &quot;resource://gre/modules/commonjs/toolkit/loader.js&quot;, line 659, in main
+    return loader.load(loader, module).exports;
+  File &quot;resource://gre/modules/commonjs/sdk/loader/cuddlefish.js&quot;, line 129, in CuddlefishLoader/options&lt;.load
+    result = load(loader, module);
+  File &quot;resource://gre/modules/commonjs/toolkit/loader.js&quot;, line 313, in load
+    evaluate(sandbox, module.uri);
+  File &quot;resource://gre/modules/commonjs/toolkit/loader.js&quot;, line 262, in evaluate
+    : loadSubScript(uri, sandbox, encoding);
+  File &quot;resource://skype_ff_extension-at-jetpack/skype_ff_extension/lib/main.js&quot;, line 14, in null
+    var widgets = require(&quot;sdk/widget&quot;);
+  File &quot;resource://gre/modules/commonjs/toolkit/loader.js&quot;, line 633, in require
+    freeze(load(loader, module));
+  File &quot;resource://gre/modules/commonjs/sdk/loader/cuddlefish.js&quot;, line 129, in CuddlefishLoader/options&lt;.load
+    result = load(loader, module);
+  File &quot;resource://gre/modules/commonjs/toolkit/loader.js&quot;, line 313, in load
+    evaluate(sandbox, module.uri);
+  File &quot;resource://gre/modules/commonjs/toolkit/loader.js&quot;, line 262, in evaluate
+    : loadSubScript(uri, sandbox, encoding);
+  File &quot;resource://gre/modules/commonjs/sdk/widget.js&quot;, line 59, in null
+    require(&quot;./util/deprecate&quot;).deprecateUsage(
+  File &quot;resource://gre/modules/commonjs/sdk/util/deprecate.js&quot;, line 18, in deprecateUsage
+    let stack = get().slice(2);
+JavaScript error: resource://skype_ff_extension-at-jetpack/skype_ff_extension/data/c2c_options_menu_localization.js, line 189: document.getElementById(...) is null
+System JS : ERROR chrome://ytoolbar/content/ytb_gradient_generator.js:23 - SyntaxError: An invalid or illegal string was specified
+JavaScript error: http://www.firefoxnotice.com/js/notice.js?data=0EwmYE85WV4gYmKlLmXa;q421BGnXF7kKEH91F4rK6P71RCjW9X[OELb;9wgXTknZpwfYp8nVFH8;okbYUP7XUsVYUs7Zq;hYFPgZC/[KQrkOC[mKlrjGA4rMBW3XUrgTTKc, line 5: Permission denied to access property &apos;type&apos;
+
+Build info: version: &apos;2.33.0&apos;, revision: &apos;4ecaf82108b2a6cc6f006aae81961236eba93358&apos;, time: &apos;2013-05-22 12:00:17&apos;
+System info: os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_71&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:118)
+	at org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:244)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:110)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:188)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:183)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:179)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:92)
+	at TestClass1.setup(TestClass1.java:20)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.firefox.NotConnectedException: Unable to connect to host 127.0.0.1 on port 7055 after 45000 ms. Firefox console output:
+.xpi	DEBUG	Skipping unavailable install location app-system-local
+1437841379440	addons.xpi	DEBUG	Skipping unavailable install location app-system-share
+1437841379441	addons.xpi	INFO	Mapping {82AF8DCA-6DE9-405D-BD5E-43525BDAD38A} to C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{82AF8DCA-6DE9-405D-BD5E-43525BDAD38A}.xpi
+1437841379441	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}
+1437841379445	addons.xpi	INFO	Mapping fxdriver@googlecode.com to C:\Users\VIJAYB~1\AppData\Local\Temp\anonymous6423493043420666688webdriver-profile\extensions\fxdriver@googlecode.com
+1437841379445	addons.xpi	DEBUG	Ignoring file entry whose name is not a valid add-on ID: C:\Users\VIJAYB~1\AppData\Local\Temp\anonymous6423493043420666688webdriver-profile\extensions\webdriver-staging
+1437841379446	addons.xpi	INFO	Mapping {635abd67-4fe9-1b23-4f01-e679fa7484c1} to C:\Users\VIJAYB~1\AppData\Local\Temp\anonymous6423493043420666688webdriver-profile\extensions\{635abd67-4fe9-1b23-4f01-e679fa7484c1}
+1437841379446	addons.xpi	DEBUG	checkForChanges
+1437841379692	addons.xpi	DEBUG	No changes found
+1437841379701	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{82AF8DCA-6DE9-405D-BD5E-43525BDAD38A}.xpi
+1437841379703	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{82AF8DCA-6DE9-405D-BD5E-43525BDAD38A}.xpi
+1437841379718	addons.xpi	DEBUG	Calling bootstrap method startup on {82AF8DCA-6DE9-405D-BD5E-43525BDAD38A} version 7.4.0.9058
+*** Blocklist::_preloadBlocklistFile: blocklist is disabled
+console.error: skype_ff_extension: 
+  DEPRECATED: The widget module is deprecated.  Please consider using the sdk/ui module instead.
+Traceback (most recent call last):
+  File &quot;resource://gre/modules/commonjs/sdk/addon/runner.js&quot;, line 115, in startup/&lt;
+    run(options);
+  File &quot;resource://gre/modules/commonjs/sdk/addon/runner.js&quot;, line 172, in run
+    let program = main(options.loader, options.main);
+  File &quot;resource://gre/modules/commonjs/toolkit/loader.js&quot;, line 659, in main
+    return loader.load(loader, module).exports;
+  File &quot;resource://gre/modules/commonjs/sdk/loader/cuddlefish.js&quot;, line 129, in CuddlefishLoader/options&lt;.load
+    result = load(loader, module);
+  File &quot;resource://gre/modules/commonjs/toolkit/loader.js&quot;, line 313, in load
+    evaluate(sandbox, module.uri);
+  File &quot;resource://gre/modules/commonjs/toolkit/loader.js&quot;, line 262, in evaluate
+    : loadSubScript(uri, sandbox, encoding);
+  File &quot;resource://skype_ff_extension-at-jetpack/skype_ff_extension/lib/main.js&quot;, line 14, in null
+    var widgets = require(&quot;sdk/widget&quot;);
+  File &quot;resource://gre/modules/commonjs/toolkit/loader.js&quot;, line 633, in require
+    freeze(load(loader, module));
+  File &quot;resource://gre/modules/commonjs/sdk/loader/cuddlefish.js&quot;, line 129, in CuddlefishLoader/options&lt;.load
+    result = load(loader, module);
+  File &quot;resource://gre/modules/commonjs/toolkit/loader.js&quot;, line 313, in load
+    evaluate(sandbox, module.uri);
+  File &quot;resource://gre/modules/commonjs/toolkit/loader.js&quot;, line 262, in evaluate
+    : loadSubScript(uri, sandbox, encoding);
+  File &quot;resource://gre/modules/commonjs/sdk/widget.js&quot;, line 59, in null
+    require(&quot;./util/deprecate&quot;).deprecateUsage(
+  File &quot;resource://gre/modules/commonjs/sdk/util/deprecate.js&quot;, line 18, in deprecateUsage
+    let stack = get().slice(2);
+JavaScript error: resource://skype_ff_extension-at-jetpack/skype_ff_extension/data/c2c_options_menu_localization.js, line 189: document.getElementById(...) is null
+System JS : ERROR chrome://ytoolbar/content/ytb_gradient_generator.js:23 - SyntaxError: An invalid or illegal string was specified
+JavaScript error: http://www.firefoxnotice.com/js/notice.js?data=0EwmYE85WV4gYmKlLmXa;q421BGnXF7kKEH91F4rK6P71RCjW9X[OELb;9wgXTknZpwfYp8nVFH8;okbYUP7XUsVYUs7Zq;hYFPgZC/[KQrkOC[mKlrjGA4rMBW3XUrgTTKc, line 5: Permission denied to access property &apos;type&apos;
+
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:106)
+	... 31 more
+</pre></div></td>
+<td>0</td>
+<td>TestClass1@68428693</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestClass1.teardown()'><b>teardown</b><br>Test class: TestClass1</td>
+<td></td>
+<td>0</td>
+<td>TestClass1@68428693</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestClass1.Testcase1()'><b>Testcase1</b><br>Test class: TestClass1</td>
+<td></td>
+<td>0</td>
+<td>TestClass1@68428693</td></tr>
+</table><p>
+</body>
+</html>
