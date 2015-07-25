@@ -30,7 +30,7 @@ public class TestClass1
 		result = wd.findElement(
 				By.xpath("//font[text()='Total Items :']//following:: td[1]"))
 				.getText();
-		Assert.assertEquals(result, "119");
+		Assert.assertEquals(result, "114");
 	}
 
 	@Test(enabled = false)
