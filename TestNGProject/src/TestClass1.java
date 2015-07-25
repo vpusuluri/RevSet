@@ -68,6 +68,11 @@ public class TestClass1
 				.getText();
 		Assert.assertEquals(result, "10");
 	}
+	@Test(enabled=false)
+	void TestCase5()
+	{
+		System.out.println("This is Test Case 5");
+	}
 
 	@AfterClass
 	public static void teardown() 
