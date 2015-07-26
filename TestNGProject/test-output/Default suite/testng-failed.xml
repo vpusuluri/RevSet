@@ -7,6 +7,7 @@
         <methods>
           <include name="setup"/>
           <include name="Testcase1"/>
+          <include name="Testcase2"/>
           <include name="teardown"/>
         </methods>
       </class> <!-- TestClass1 -->

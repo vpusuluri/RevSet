@@ -46,7 +46,7 @@ public class TestClass1
 		Assert.assertEquals(result, "13");
 	}
 
-	@Test(enabled = false)
+	@Test
 	void Testcase3() 
 	{
 		wd.get("http://www.floraindia.com");
@@ -55,6 +55,7 @@ public class TestClass1
 		result = wd.findElement(
 				By.xpath("//font[text()='Total Items  :']//following::td[1]"))
 				.getText();
+		System.out.println("The Result for TestCase 3 is " + result);
 		Assert.assertEquals(result, "27");
 	}
 
